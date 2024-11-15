@@ -60,7 +60,7 @@ public class EmbarcacionController {
         Embarcacion embarcacionActual = embarcacionService.getEmbarcacionById(id);
         if (embarcacionActual != null) {
             embarcacionService.deleteEmbarcacion(id);
-            return ResponseEntity.ok(embarcacionActual);
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
     }
